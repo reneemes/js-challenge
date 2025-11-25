@@ -30,7 +30,7 @@ class Programmer extends Person {
   }
 
   offerNewTask() {
-    if (this.busy == true) {
+    if (this.busy) {
       console.log(`${this.name} can't accept any new tasks right now.`);
     } else {
       console.log(`${this.name} would love to take on a new responsibility.`);
@@ -53,17 +53,21 @@ class Programmer extends Person {
 const person1 = new Person("Harold", "Backend Engineer", 20);
 const c1 = new Programmer("Liana", "DevOps", 35, ["HTML", "C#", "LUA"]);
 const c2 = new Programmer("Edwin", "janitor", 55, ["HTML", "SASS”, ”Ruby"]);
-const c3 = new Programmer("Manny", "SysOps", 31,[("HTML", "CSS", "JS", "R")]);
+const c3 = new Programmer("Manny", "SysOps", 31,["HTML", "CSS", "JS", "R"]);
+
 c1.learnLanguage("CSS");
 c2.learnLanguage("C++");
 c3.learnLanguage("JAVA");
+
 console.log(c1.listLanguages());
 console.log(c2.listLanguages());
 console.log(c3.listLanguages());
+
 console.log(person1);
 console.log(c1);
 console.log(c2);
 console.log(c3);
+
 person1.exercise();
 person1.fetchJob();
 
