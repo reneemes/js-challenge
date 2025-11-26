@@ -43,6 +43,7 @@ class Programmer extends Person {
   }
 
   listLanguages() {
+    console.log(`${this.name} knows ${this.languages.join(", ")}`);
     return this.languages;
   }
 }
@@ -52,7 +53,7 @@ class Programmer extends Person {
 
 const person1 = new Person("Harold", "Backend Engineer", 20);
 const c1 = new Programmer("Liana", "DevOps", 35, ["HTML", "C#", "LUA"]);
-const c2 = new Programmer("Edwin", "janitor", 55, ["HTML", "SASS”, ”Ruby"]);
+const c2 = new Programmer("Edwin", "janitor", 55, ["HTML", "SASS", "Ruby"]);
 const c3 = new Programmer("Manny", "SysOps", 31,["HTML", "CSS", "JS", "R"]);
 
 c1.learnLanguage("CSS");
